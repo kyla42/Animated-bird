@@ -14,6 +14,10 @@ body {
     font-size: 1.6rem;
 }
 
+h1 {
+    color: hsl(53, 91%, 91%);
+}
+
 main {
     width: 100vw;
     height: 100vh;
@@ -28,10 +32,11 @@ main {
     height: 50rem;
     margin: 0 auto;
     background-image: url(https://res.cloudinary.com/du1fb00fv/image/upload/v1649255458/sample%20pictures/flowers_tr_myfiyg.png);
-    background-position: center 70%;
+    background-position: center 90%;
     background-repeat: no-repeat;
     background-size: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
