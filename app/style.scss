@@ -1,8 +1,3 @@
-$bodyColor: hsl(0, 0%, 100%);
-$beakColor: hsl(39, 100%, 50%);
-$eyeColor: rgb(32, 32, 32);
-$backGroundColor: lightblue;
-
 *,
 *::before,
 *::after {
@@ -229,18 +224,12 @@ main {
         //     }
         // }
     }
-
-    // &:hover {
-    //     animation: blink 1s both;
-    //     animation-iteration-count: 1;
-    // }
 }
-
 
 // bird shake
 .bird.shake {
     animation: shake .5s both;
-    animation-iteration-count: 1;
+    animation-iteration-count: 2;
 }
 
 @keyframes shake {
