@@ -90,6 +90,8 @@ main {
                 transform: rotate(10deg);
                 background-color: #2c2c2c;
                 border-radius: 50%;
+                animation: blink 5s both;
+                animation-iteration-count: infinite;
             }
 
             .right-eye {
@@ -101,6 +103,8 @@ main {
                 transform: rotate(-10deg);
                 background-color: #2c2c2c;
                 border-radius: 50%;
+                animation: blink 5s both;
+                animation-iteration-count: infinite;
             }
         }
     }
@@ -387,5 +391,19 @@ main {
         opacity: 1;
         transition: all 1s ease;
         transition-delay: .8s;
+    }
+}
+
+@keyframes blink {
+    49% {
+        height: 1.4rem;
+    }
+
+    50% {
+        height: 0.2rem;
+    }
+
+    51% {
+        height: 1.4rem;
     }
 }
