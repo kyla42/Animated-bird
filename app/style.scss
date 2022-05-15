@@ -52,11 +52,12 @@ main {
     &__head {
         position: absolute;
         width: 10rem;
-        height: 7rem;
+        height: 6.5rem;
         top: 8rem;
         left: 10rem;
-        background-color: azure;
-        border-radius: 5rem 5rem 0 0;
+        background-color: white;
+        border-radius: 5rem 5rem 0.7rem 0.7rem;
+
 
         .beaks {
             .upper-beak {
@@ -168,7 +169,7 @@ main {
         width: 14rem;
         height: 14rem;
         border-radius: 50% 50% 40% 40%;
-        background-color: azure;
+        background-color: white;
         box-shadow: 0 0 2rem 0 hsla(0, 0%, 45%, 0.1);
         z-index: -1;
 
@@ -234,12 +235,80 @@ main {
         //         background-color: rgb(216, 103, 103);
         //     }
         // }
+
+        .scarf {
+            opacity: 0;
+
+            span {
+                position: absolute;
+
+                &:first-child {
+                    top: 0;
+                    left: 0.5rem;
+                    width: 13rem;
+                    height: 6rem;
+                    background-color: rgb(66, 194, 194);
+                    border-radius: 3rem 3rem 50% 50%;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -1rem;
+                        left: 1.5rem;
+                        width: 10rem;
+                        height: 5rem;
+                        background-color: white;
+                        border-radius: 50%;
+                        z-index: 2;
+                    }
+                }
+
+                &:nth-child(2) {
+                    top: 3.2rem;
+                    right: 1.5rem;
+                    width: 2.3rem;
+                    height: 4.3rem;
+                    background-color: rgb(66, 194, 194);
+                    border-radius: 0.5rem;
+                    transform: rotate(-18deg);
+                }
+
+                &:last-child {
+                    top: 6.7rem;
+                    right: 1.7rem;
+                    width: 0.5rem;
+                    height: 1.5rem;
+                    background-color: rgb(66, 194, 194);
+                    border-radius: 0.3rem;
+                    transform: rotate(-18deg);
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        width: 0.5rem;
+                        height: 1.5rem;
+                        border-radius: 0.3rem;
+                        background-color: rgb(66, 194, 194);
+                    }
+
+                    &::before {
+                        right: 0.9rem;
+                    }
+
+                    &::after {
+                        left: 0.9rem;
+                    }
+                }
+            }
+        }
     }
 }
 
 // bird shake
 .bird.shake {
-    animation: shake .5s both;
+    animation: shake .5s forwards;
     animation-iteration-count: 2;
 }
 
@@ -263,7 +332,7 @@ main {
 
 // bird jump
 .bird.jump {
-    animation: jump .7s both;
+    animation: jump .7s forwards;
     animation-iteration-count: 1;
 }
 
@@ -344,7 +413,7 @@ main {
 
 // bird stretch
 .bird.stretch2 {
-    animation: stretch2 2s both;
+    animation: stretch2 2s forwards;
     animation-iteration-count: 1;
 }
 
@@ -377,14 +446,11 @@ main {
 // add ribbon
 .bird.ribbon {
 
-    .bird__ribbon {
-
-        .left-ribbon,
-        .right-ribbon {
-            opacity: 1;
-            transform: translateY(10.8rem);
-            transition: all 1s ease;
-        }
+    .left-ribbon,
+    .right-ribbon {
+        opacity: 1;
+        transform: translateY(10.8rem);
+        transition: all 1s ease;
     }
 
     .bird__cheeks {
@@ -394,15 +460,21 @@ main {
     }
 }
 
-// bird rotate
+// bird slide
 .bird.sliding {
-    animation: sliding 2s linear;
+    animation-name: sliding;
+    animation-duration: 2s;
     animation-iteration-count: 1;
+
+    .scarf {
+        opacity: 1;
+        transition-delay: 1s;
+    }
 }
 
 @keyframes sliding {
     40% {
-        transform: translateX(-100%);
+        transform: translateX(-150%);
     }
 
     41% {
@@ -411,12 +483,12 @@ main {
 
     42% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-150%);
     }
 
     69% {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(150%);
     }
 
     70% {
@@ -428,6 +500,7 @@ main {
     }
 }
 
+// blink
 @keyframes blink {
     49% {
         height: 1.4rem;
