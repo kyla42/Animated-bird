@@ -58,7 +58,6 @@ main {
         background-color: white;
         border-radius: 5rem 5rem 0.7rem 0.7rem;
 
-
         .beaks {
             .upper-beak {
                 position: absolute;
@@ -497,6 +496,24 @@ main {
 
     100% {
         transform: translateX(0);
+    }
+}
+
+// bird incline
+.bird.incline {
+    .bird__head {
+        animation-name: incline;
+        animation-duration: 2s;
+
+        @keyframes incline {
+            30% {
+                transform: translate(3rem, 0.6rem) rotate(23deg);
+            }
+
+            70% {
+                transform: translate(3rem, 0.6rem) rotate(23deg);
+            }
+        }
     }
 }
 
