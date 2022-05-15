@@ -474,7 +474,7 @@ main {
 
 @keyframes sliding {
     40% {
-        transform: translateX(-150%);
+        transform: translateX(-200%);
     }
 
     41% {
@@ -483,12 +483,12 @@ main {
 
     42% {
         opacity: 0;
-        transform: translateX(-150%);
+        transform: translateX(-200%);
     }
 
     69% {
         opacity: 0;
-        transform: translateX(150%);
+        transform: translateX(200%);
     }
 
     70% {
