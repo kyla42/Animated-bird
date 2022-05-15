@@ -287,12 +287,12 @@ main {
 
 // bird jump and stretch
 .bird.stretch1 {
-    animation: stretch1 2s both;
+    animation: stretch1 2.2s linear;
     animation-iteration-count: 1;
 }
 
 @keyframes stretch1 {
-    20% {
+    5% {
         transform: translate(0, -200%);
     }
 
@@ -301,22 +301,22 @@ main {
 
     }
 
-    65% {
+    75% {
         transform: translate(0, 0) scale(2, 0.3);
 
     }
 
-    70% {
+    76% {
         transform: translate(-4%, 0) scale(2, 0.3);
 
     }
 
-    75% {
+    79% {
         transform: translate(4%, 0) scale(2, 0.3);
 
     }
 
-    80% {
+    82% {
         transform: translate(-4%, 0) scale(2, 0.3);
 
     }
@@ -326,12 +326,12 @@ main {
 
     }
 
-    90% {
+    88% {
         transform: translate(-4%, 0) scale(2, 0.3);
 
     }
 
-    95% {
+    93% {
         transform: translate(0) scale(1.5);
 
     }
@@ -391,6 +391,40 @@ main {
         opacity: 1;
         transition: all 1s ease;
         transition-delay: .8s;
+    }
+}
+
+// bird rotate
+.bird.sliding {
+    animation: sliding 2s linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes sliding {
+    40% {
+        transform: translateX(-100%);
+    }
+
+    41% {
+        opacity: 1;
+    }
+
+    42% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    69% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 

@@ -1,5 +1,5 @@
 const birdBtn = document.querySelector(".bird");
-const movement = ["shake", "jump", "stretch1", "stretch2", "ribbon"];
+const movement = ["shake", "jump", "stretch1", "stretch2", "ribbon", "sliding"];
 
 birdBtn.addEventListener("click", function () {
     for (let i = 0; i < movement.length; i++) {
