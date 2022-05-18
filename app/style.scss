@@ -155,6 +155,17 @@ main {
         }
     }
 
+    &__glasses {
+        position: absolute;
+        top: 0rem;
+        left: 22.5%;
+        width: 16rem;
+        height: 3rem;
+        background-image: url(https://res.cloudinary.com/du1fb00fv/image/upload/v1652884629/my%20pictures/glasses_lwsplo.png);
+        background-size: cover;
+        opacity: 0;
+    }
+
     &__question {
         position: absolute;
         top: 18%;
@@ -534,6 +545,22 @@ main {
         }
     }
 }
+
+.bird.glasses {
+
+    .bird__glasses {
+        animation: glasses 1.8s forwards;
+        animation-iteration-count: 1;
+
+        @keyframes glasses {
+            100% {
+                opacity: 1;
+                top: 9rem;
+            }
+        }
+    }
+}
+
 
 // blink (infinite)
 @keyframes blink {
