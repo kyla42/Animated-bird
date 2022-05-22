@@ -48,6 +48,7 @@ main {
     height: 30rem;
     z-index: 2;
     outline: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
     cursor: pointer;
 
     &__head {
