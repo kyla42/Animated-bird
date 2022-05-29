@@ -80,30 +80,27 @@ main {
         }
 
         .eyes {
-            .left-eye {
+            %eye {
                 position: absolute;
                 top: 2.4rem;
-                left: 1.2rem;
                 width: 1.7rem;
                 height: 1.4rem;
-                transform: rotate(10deg);
                 background-color: #2c2c2c;
                 border-radius: 50%;
                 animation: blink 5s both;
                 animation-iteration-count: infinite;
             }
 
+            .left-eye {
+                @extend %eye;
+                left: 1.2rem;
+                transform: rotate(10deg);
+            }
+
             .right-eye {
-                position: absolute;
-                top: 2.4rem;
+                @extend %eye;
                 right: 1.2rem;
-                width: 1.7rem;
-                height: 1.4rem;
                 transform: rotate(-10deg);
-                background-color: #2c2c2c;
-                border-radius: 50%;
-                animation: blink 5s both;
-                animation-iteration-count: infinite;
             }
         }
 
@@ -111,24 +108,23 @@ main {
             opacity: 0;
             z-index: 5;
 
-            .left-cheek {
+            %cheek {
                 position: absolute;
                 top: 4.2rem;
-                left: 8%;
                 width: 2rem;
                 height: 1.2rem;
                 border-radius: 50%;
                 background-color: hsla(350, 100%, 88%, 0.5);
             }
 
+            .left-cheek {
+                @extend %cheek;
+                left: 8%;
+            }
+
             .right-cheek {
-                position: absolute;
-                top: 4.2rem;
+                @extend %cheek;
                 right: 8%;
-                width: 2rem;
-                height: 1.2rem;
-                border-radius: 50%;
-                background-color: hsla(350, 100%, 88%, 0.5);
             }
         }
     }
@@ -136,24 +132,24 @@ main {
     &__ribbon {
         width: 2rem;
 
-        .left-ribbon {
+        %ribbon {
             position: absolute;
             top: -5rem;
-            left: 41%;
             border-top: 2rem solid transparent;
             border-bottom: 1rem solid transparent;
-            border-left: 3rem solid pink;
             opacity: 0;
         }
 
+        .left-ribbon {
+            @extend %ribbon;
+            left: 41%;
+            border-left: 3rem solid pink;
+        }
+
         .right-ribbon {
-            position: absolute;
-            top: -5rem;
+            @extend %ribbon;
             right: 41%;
-            border-top: 2rem solid transparent;
-            border-bottom: 1rem solid transparent;
             border-right: 3rem solid pink;
-            opacity: 0;
         }
     }
 
